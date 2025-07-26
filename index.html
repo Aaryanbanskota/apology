@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Under Construction - Aaryan's Project</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(135deg, #6b7280 0%, #4b5563 100%);
+      font-family: 'Segoe UI', 'Arial', sans-serif;
+      color: #e5e7eb;
+      overflow-x: hidden;
+    }
+
+    .apology-message {
+      max-width: 90%;
+      width: 700px;
+      padding: 30px;
+      background: rgba(31, 41, 55, 0.95);
+      border-radius: 20px;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+      text-align: center;
+      animation: slideIn 1.5s ease-in-out;
+      position: relative;
+      z-index: 1;
+      margin: 20px;
+    }
+
+    h2 {
+      font-size: clamp(1.8rem, 5vw, 2.4rem);
+      color: #a5b4fc;
+      margin-bottom: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      font-weight: 600;
+      animation: pulse 2s infinite;
+    }
+
+    p {
+      font-size: clamp(1rem, 3vw, 1.1rem);
+      line-height: 1.8;
+      margin: 15px 0;
+      color: #d1d5db;
+      opacity: 0;
+      animation: fadeInText 1s ease-in forwards;
+      animation-delay: calc(0.2s * var(--i));
+    }
+
+    strong {
+      color: #e5e7eb;
+      font-size: clamp(1.1rem, 3vw, 1.2rem);
+      font-weight: 700;
+    }
+
+    .emoji {
+      font-size: clamp(1.5rem, 4vw, 2rem);
+      animation: bounce 1.5s infinite;
+    }
+
+    .highlight {
+      color: #a5b4fc;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    .highlight:hover {
+      color: #c7d2fe;
+    }
+
+    /* Background animation */
+    .background-shapes {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+      overflow: hidden;
+    }
+
+    .shape {
+      position: absolute;
+      background: rgba(165, 180, 252, 0.2);
+      border-radius: 50%;
+      animation: float 10s infinite ease-in-out;
+    }
+
+    .shape:nth-child(1) {
+      width: clamp(60px, 15vw, 80px);
+      height: clamp(60px, 15vw, 80px);
+      top: 10%;
+      left: 15%;
+      animation-delay: 0s;
+    }
+
+    .shape:nth-child(2) {
+      width: clamp(80px, 20vw, 100px);
+      height: clamp(80px, 20vw, 100px);
+      top: 60%;
+      left: 70%;
+      animation-delay: 2s;
+    }
+
+    .shape:nth-child(3) {
+      width: clamp(50px, 12vw, 60px);
+      height: clamp(50px, 12vw, 60px);
+      top: 40%;
+      left: 30%;
+      animation-delay: 4s;
+    }
+
+    /* Animations */
+    @keyframes slideIn {
+      from {
+        opacity: 0;
+        transform: translateY(50px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeInText {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes pulse {
+      0%, 100% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.03);
+      }
+    }
+
+    @keyframes bounce {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-8px);
+      }
+    }
+
+    @keyframes float {
+      0% {
+        transform: translateY(0) rotate(0deg);
+      }
+      50% {
+        transform: translateY(-40px) rotate(180deg);
+      }
+      100% {
+        transform: translateY(0) rotate(360deg);
+      }
+    }
+
+    @media (max-width: 600px) {
+      .apology-message {
+        padding: 20px;
+        margin: 15px;
+      }
+
+      h2 {
+        flex-direction: column;
+        gap: 8px;
+      }
+
+      .shape {
+        display: none; /* Hide background shapes on small screens for performance */
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="background-shapes">
+    <div class="shape"></div>
+    <div class="shape"></div>
+    <div class="shape"></div>
+  </div>
+  <div class="apology-message">
+    <h2><span class="emoji">🚧</span> Still in Progress – My Sincere Apologies <span class="emoji">🙏</span></h2>
+    <p style="--i: 1">
+      I want to take a moment to personally say: I'm truly sorry <span class="emoji">😔</span>.  
+      This part of the project is still under <span class="highlight">active development</span>, and I deeply regret that it isn’t ready for you right now.
+    </p>
+    <p style="--i: 2">
+      I understand your time is precious <span class="emoji">🕒</span>, and landing on a page that’s not yet complete can feel disappointing. Please know that this wasn’t intentional—I care deeply about your experience here, and I’m working hard behind the scenes to finish this the right way.
+    </p>
+    <p style="--i: 3">
+      Your support means the world to me <span class="emoji">💙</span>, and I appreciate your patience more than I can express in words.  
+      Thank you again for stopping by—this section will be ready for you very soon.
+    </p>
+    <p style="--i: 4">
+      With respect and gratitude,  
+      <strong>— Aaryan</strong> <span class="emoji">✨</span>
+    </p>
+  </div>
+</body>
+</html>
